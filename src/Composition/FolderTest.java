@@ -39,13 +39,13 @@ public class FolderTest {
         phpFolder.print();
 
 
-        sourceFilesFolder.deleteFolder("app");
+        phpFolder.deleteFolder("app");
 
         System.out.println("\n---\n");
         phpFolder.print();
 
 
-        sourceFilesFolder.deleteFolder("public");
+        phpFolder.deleteFolder("public");
 
         System.out.println("\n---\n");
         phpFolder.print();
@@ -53,6 +53,10 @@ public class FolderTest {
 
 
 
+
+    }
+
+    public void addFoldersTogether(){
 
     }
 }

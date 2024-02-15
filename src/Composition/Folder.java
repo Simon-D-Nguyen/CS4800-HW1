@@ -40,18 +40,25 @@ public class Folder {
     public void deleteFile(String fileName) {
         if (fileMap.containsKey(fileName)) {
             fileMap.remove(fileName);
+            System.out.println("File \"" + fileName + "\" was deleted!");
         }
         else {
-            System.out.println("File " + fileName + " was not found.\n");
+            for(Folder entry : folderMap.values()) {
+                entry.deleteFile(fileName);
+            }
         }
     }
+
 
     public void deleteFolder(String folderName) {
         if (folderMap.containsKey(folderName)) {
             folderMap.remove(folderName);
+            System.out.println("Folder \"" + folderName + "\" was deleted!");
         }
         else {
-            System.out.println("Folder " + folderName + " was not found.\n");
+            for(Folder entry : folderMap.values()) {
+                entry.deleteFolder(folderName);
+            }
         }
     }
 
@@ -59,7 +66,7 @@ public class Folder {
         print(0);
     }
 
-    public void print(int spacing) {
+    private void print(int spacing) {
 
         StringBuilder nameLine = new StringBuilder();
 
