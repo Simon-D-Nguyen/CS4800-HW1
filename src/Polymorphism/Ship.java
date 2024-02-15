@@ -5,13 +5,13 @@ public class Ship {
     protected String buildYear;
 
     public Ship() {
-        setName("n/a");
-        setBuildYear("0");
+        this.name = "n/a";
+        this.buildYear = "0";
     }
 
     public Ship(String name, String buildYear) {
-        setName(name);
-        setBuildYear(buildYear);
+        this.name = name;
+        this.buildYear = buildYear;
     }
 
     public void setName(String name) {

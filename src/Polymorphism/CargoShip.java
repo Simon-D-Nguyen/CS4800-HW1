@@ -1,32 +1,32 @@
 package Polymorphism;
 
 public class CargoShip extends Ship {
-    private int cargoCapacity;
+    private int cargoCapacityInTon;
 
     public CargoShip() {
         super();
-        setCargoCapacity(-1);
+        this.cargoCapacityInTon = -1;
     }
     public CargoShip(String name,
                      String buildYear,
-                     int cargoCapacity) {
+                     int cargoCapacityInTon) {
         super(name, buildYear);
-        setCargoCapacity(cargoCapacity);
+        this.cargoCapacityInTon = cargoCapacityInTon;
     }
 
 
-    public void setCargoCapacity(int cargoCapacity) {
-        this.cargoCapacity = cargoCapacity;
+    public void setcargoCapacityInTon(int cargoCapacityInTon) {
+        this.cargoCapacityInTon = cargoCapacityInTon;
     }
 
-    public int getCargoCapacity() {
-        return cargoCapacity;
+    public int getcargoCapacityInTon() {
+        return cargoCapacityInTon;
     }
 
     @Override
     public void print() {
         System.out.println("Ship Name: " + this.getName());
-        System.out.println("Cargo Capacity (tons): " + cargoCapacity);
+        System.out.println("Cargo Capacity (tons): " + cargoCapacityInTon);
         System.out.println();
     }
 }
