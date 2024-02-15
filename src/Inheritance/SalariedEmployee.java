@@ -1,4 +1,4 @@
-package src.Inheritance;
+package Inheritance;
 
 public class SalariedEmployee extends Employee{
     private int weeklySalary;

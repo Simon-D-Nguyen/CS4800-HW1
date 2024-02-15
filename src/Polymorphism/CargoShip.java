@@ -1,4 +1,4 @@
-package src.Polymorphism;
+package Polymorphism;
 
 public class CargoShip extends Ship {
     private int cargoCapacity;

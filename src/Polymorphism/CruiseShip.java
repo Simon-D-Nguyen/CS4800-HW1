@@ -1,4 +1,4 @@
-package src.Polymorphism;
+package Polymorphism;
 
 public class CruiseShip extends Ship {
     private int maxNumOfPassengers;

@@ -1,4 +1,4 @@
-package src.Aggregation;
+package Aggregation;
 
 public class Textbook {
     private String author;
