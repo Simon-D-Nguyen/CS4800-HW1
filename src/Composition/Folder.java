@@ -1,3 +1,7 @@
+/*
+Folder.java
+ */
+
 package Composition;
 
 import java.util.HashMap;

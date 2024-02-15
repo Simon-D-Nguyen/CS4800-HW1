@@ -1,3 +1,7 @@
+/*
+FolderText.java
+ */
+
 package Composition;
 
 public class FolderTest {

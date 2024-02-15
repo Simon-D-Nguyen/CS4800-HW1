@@ -1,3 +1,7 @@
+/*
+File.java
+ */
+
 package Composition;
 
 public class File {
@@ -14,8 +18,6 @@ public class File {
     public String getName() {
         return name;
     }
-
-
 
     public void print() {
         print(0);
