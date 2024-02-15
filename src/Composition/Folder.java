@@ -56,28 +56,7 @@ public class Folder {
     }
 
     public void print() {
-
         print(0);
-
-//        System.out.println(name);
-//        int spacing = 1;
-//
-//        while(!folderMap.isEmpty()) {
-//            System.out.print("\t-");
-//            for(Folder entry : folderMap.values()){
-//                entry.print(spacing);
-//            }
-//        }
-//
-//        while(!fileMap.isEmpty()) {
-//            System.out.print("\t-");
-//            for(File entry : fileMap.values()) {
-//                entry.print();
-//            }
-//        }
-//
-//
-        //TODO: Prints out all files and subdirectories
     }
 
     public void print(int spacing) {

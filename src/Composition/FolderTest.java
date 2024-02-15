@@ -38,12 +38,21 @@ public class FolderTest {
 
         phpFolder.print();
 
-//        System.out.println("\n\n");
-//        System.out.println(phpFolder.getSubFolder("app").getName());
 
         sourceFilesFolder.deleteFolder("app");
 
+        System.out.println("\n---\n");
         phpFolder.print();
+
+
+        sourceFilesFolder.deleteFolder("public");
+
+        System.out.println("\n---\n");
+        phpFolder.print();
+
+
+
+
 
     }
 }
