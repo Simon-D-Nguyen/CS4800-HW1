@@ -39,24 +39,16 @@ public class FolderTest {
         phpFolder.print();
 
 
+        System.out.println("\n---\n");
         phpFolder.deleteFolder("app");
 
-        System.out.println("\n---\n");
         phpFolder.print();
 
 
+        System.out.println("\n---\n");
         phpFolder.deleteFolder("public");
 
-        System.out.println("\n---\n");
         phpFolder.print();
-
-
-
-
-
-    }
-
-    public void addFoldersTogether(){
 
     }
 }
