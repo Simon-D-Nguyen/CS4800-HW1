@@ -1,3 +1,7 @@
+/*
+Course.java
+ */
+
 package Aggregation;
 
 public class Course {
