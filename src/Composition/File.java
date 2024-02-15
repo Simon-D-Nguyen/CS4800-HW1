@@ -28,7 +28,7 @@ public class File {
             nameLine.append("\t");
         }
 
-        nameLine.append("- " + name);
+        nameLine.append("|- " + name + "\t---<File>");
         System.out.println(nameLine.toString());
     }
 }

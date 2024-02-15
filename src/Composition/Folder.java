@@ -1,5 +1,6 @@
 package Composition;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Folder {
@@ -9,8 +10,8 @@ public class Folder {
 
     public Folder(String name) {
         this.name = name;
-        fileMap = null;
-        folderMap = null;
+        fileMap = new HashMap<String, File>();
+        folderMap = new HashMap<String, Folder>();
 
     }
 
@@ -32,6 +33,10 @@ public class Folder {
         folderMap.put(folder.getName(), folder);
     }
 
+    public Folder getSubFolder(String name) {
+        return folderMap.get(name);
+    }
+
     public void deleteFile(String fileName) {
         if (fileMap.containsKey(fileName)) {
             fileMap.remove(fileName);
@@ -46,7 +51,7 @@ public class Folder {
             folderMap.remove(folderName);
         }
         else {
-            System.out.println("Folder " + folderName + "was not found.\n");
+            System.out.println("Folder " + folderName + " was not found.\n");
         }
     }
 
@@ -83,20 +88,20 @@ public class Folder {
             nameLine.append("\t");
         }
 
-        nameLine.append("- " + name);
+        nameLine.append("|- " + name + "\t---<Folder>");
         System.out.println(nameLine.toString());
 
         int newSpacing = spacing + 1;
 
-        while(!folderMap.isEmpty()) {
-            System.out.println();
+        if (!folderMap.isEmpty()) {
+            //System.out.println();
             for(Folder entry : folderMap.values()){
                 entry.print(newSpacing);
             }
         }
 
-        while(!fileMap.isEmpty()) {
-            System.out.print("\t-");
+        if (!fileMap.isEmpty()) {
+            //System.out.println();
             for(File entry : fileMap.values()) {
                 entry.print(newSpacing);
             }
