@@ -1,16 +1,22 @@
 /*
 CourseTest.java
  */
+
 package Aggregation;
 
 public class CourseTest {
 
     public static void main(String[] args) {
 
-        Textbook courseBook = new Textbook();
-        courseBook.setAuthor("Robert C. Martin");
-        courseBook.setTitle("Clean Code");
-        courseBook.setPublisher("Pearson");
+        Textbook textbook1 = new Textbook();
+        textbook1.setAuthor("Robert C. Martin");
+        textbook1.setTitle("Clean Code");
+        textbook1.setPublisher("Pearson");
+
+        Textbook textbook2 = new Textbook();
+        textbook2.setAuthor("Simon Nguyen");
+        textbook2.setTitle("AAAAAAAAA");
+        textbook2.setPublisher("CPP");
 
         Instructor first = new Instructor();
         first.setInstructorFirstName("Nima");
@@ -24,7 +30,7 @@ public class CourseTest {
 
 
 
-        Course newCourse = new Course(courseBook, first, second);
+        Course newCourse = new Course(textbook1, textbook2, first, second);
         newCourse.setCourseName("CS4800");
 
         newCourse.print();
