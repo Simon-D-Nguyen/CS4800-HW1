@@ -6,17 +6,16 @@ package Aggregation;
 
 public class Course {
     private String courseName;
-    private String instructorFirstName;
-    private String instructorLastName;
-    private String officeNum;
+    private Instructor instructor1;
+    private Instructor instructor2;
     private Textbook textbook;
 
 
-    public Course(Textbook textbook) {
+    public Course(Textbook textbook, Instructor instructor1,
+                  Instructor instructor2) {
         setCourseName("n/a");
-        setInstructorFirstName("n/a");
-        setInstructorFirstName("n/a");
-        setOfficeNum("n/a");
+        this.instructor1 = instructor1;
+        this.instructor2 = instructor2;
         this.textbook = textbook;
     }
 
@@ -30,38 +29,35 @@ public class Course {
         return courseName;
     }
 
-    public void setInstructorFirstName(String instructorFirstName) {
-        this.instructorFirstName = instructorFirstName;
+
+    public void setInstructor1(Instructor instructor1) {
+        this.instructor1 = instructor1;
     }
 
-    public String getInstructorFirstName() {
-        return instructorFirstName;
+    public Instructor getInstructor1() {
+        return instructor1;
     }
 
-    public void setInstructorLastName(String instructorLastName) {
-        this.instructorLastName = instructorLastName;
+    public void setInstructor2(Instructor instructor2) {
+        this.instructor2 = instructor2;
     }
 
-    public String getInstructorLastName() {
-        return instructorLastName;
+    public Instructor getInstructor2() {
+        return instructor2;
     }
-
-    public void setOfficeNum(String officeNum) {
-        this.officeNum = officeNum;
-    }
-
-    public String getOfficeNum() {
-        return officeNum;
-    }
-
 
     public void print() {
-        String instructorName = instructorLastName + ", " + instructorFirstName;
         System.out.println("Course Name: " + courseName);
-        System.out.println("Instructor Name (Last, First): " + instructorName);
+
+        System.out.println("Instructors (Last, First): ");
+        System.out.println("\t" + instructor1.getInstructorFirstName() + ", "
+                + instructor1.getInstructorFirstName());
+        System.out.println("\t" + instructor2.getInstructorLastName() + ", " +
+                instructor2.getInstructorFirstName());
+
         System.out.println("Textbook: ");
-        System.out.println("\tTitle: " + this.textbook.getTitle());
-        System.out.println("\tAuthor: " + this.textbook.getAuthor());
+        System.out.println("\t- Title: " + this.textbook.getTitle());
+        System.out.println("\t- Author: " + this.textbook.getAuthor());
     }
 
 }
