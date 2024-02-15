@@ -84,14 +84,12 @@ public class Folder {
         int newSpacing = spacing + 1;
 
         if (!folderMap.isEmpty()) {
-            //System.out.println();
             for(Folder entry : folderMap.values()){
                 entry.print(newSpacing);
             }
         }
 
         if (!fileMap.isEmpty()) {
-            //System.out.println();
             for(File entry : fileMap.values()) {
                 entry.print(newSpacing);
             }
