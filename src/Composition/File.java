@@ -18,6 +18,6 @@ public class File {
 
 
     public void print() {
-        // TODO: prints out file name
+        System.out.println(name);
     }
 }
