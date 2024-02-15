@@ -7,15 +7,15 @@ public class Employee {
 
 
     public Employee(){
-        setFirstName("n/a");
-        setLastName("n/a");
-        setSocialSecurityNum("n/a");
+        this.firstName = "n/a";
+        this.lastName = "n/a";
+        this.socialSecurityNum = "n/a";
     }
 
     public Employee(String firstName, String lastName, String socialSecurityNum){
-        setFirstName(firstName);
-        setLastName(lastName);
-        setSocialSecurityNum(socialSecurityNum);
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.socialSecurityNum = socialSecurityNum;
     }
 
 

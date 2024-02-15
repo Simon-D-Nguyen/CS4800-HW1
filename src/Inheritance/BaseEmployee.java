@@ -5,7 +5,7 @@ public class BaseEmployee extends Employee {
 
     public BaseEmployee(){
         super();
-        setBaseSalary(-1);
+        this.baseSalary = -1;
     }
 
     public BaseEmployee(String firstName,
@@ -13,7 +13,7 @@ public class BaseEmployee extends Employee {
                         String socialSecurityNum,
                         int baseSalary) {
         super(firstName, lastName, socialSecurityNum);
-        setBaseSalary(baseSalary);
+        this.baseSalary = baseSalary;
     }
 
     public void setBaseSalary(int baseSalary) {

@@ -5,7 +5,7 @@ public class SalariedEmployee extends Employee{
 
     public SalariedEmployee() {
         super();
-        setWeeklySalary(-1);
+        this.weeklySalary = -1;
     }
 
     public SalariedEmployee(String firstName,
@@ -13,7 +13,7 @@ public class SalariedEmployee extends Employee{
                             String socialSecurityNum,
                             int weeklySalary){
         super(firstName, lastName, socialSecurityNum);
-        setWeeklySalary(weeklySalary);
+        this.weeklySalary = weeklySalary;
     }
 
 

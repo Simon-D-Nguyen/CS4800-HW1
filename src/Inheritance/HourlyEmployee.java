@@ -6,8 +6,8 @@ public class HourlyEmployee extends Employee{
 
     public HourlyEmployee() {
         super();
-        setWage(-1);
-        setNumOfHoursWorked(-1);
+        this.wage = -1;
+        this.numOfHoursWorked = -1;
     }
 
     public HourlyEmployee(String firstName,
@@ -16,8 +16,8 @@ public class HourlyEmployee extends Employee{
                           int wage,
                           int numOfHoursWorked) {
         super(firstName, lastName, socialSecurityNum);
-        setWage(wage);
-        setNumOfHoursWorked(numOfHoursWorked);
+        this.wage = wage;
+        this.numOfHoursWorked = numOfHoursWorked;
     }
 
 

@@ -6,8 +6,8 @@ public class CommissionEmployee extends Employee {
 
     public CommissionEmployee(){
         super();
-        setCommissionRate(0);
-        setGrossSales(-1);
+        this.commissionRate = -1;
+        this.grossSales = -1;
     }
 
     public CommissionEmployee(String firstName,
@@ -16,8 +16,8 @@ public class CommissionEmployee extends Employee {
                               int commissionRate,
                               int grossSales) {
         super(firstName, lastName, socialSecurityNum);
-        setCommissionRate(commissionRate);
-        setGrossSales(grossSales);
+        this.commissionRate = commissionRate;
+        this.grossSales = grossSales;
     }
 
     public void setCommissionRate(int commissionRate) {
