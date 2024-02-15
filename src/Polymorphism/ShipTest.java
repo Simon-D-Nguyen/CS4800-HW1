@@ -7,12 +7,12 @@ public class ShipTest {
         Ship[] listOfShips = new Ship[3];
 
         listOfShips[0] = new Ship("One", "2000");
-        listOfShips[1] = new CargoShip("Two", "2001", 15);
-        listOfShips[2] = new CruiseShip("Three", "2003", 1);
+        listOfShips[1] = new CruiseShip("Three", "2003", 1);
+        listOfShips[2] = new CargoShip("Two", "2001", 15);
+
 
         for(Ship ships : listOfShips) {
             ships.print();
         }
-
     }
 }
