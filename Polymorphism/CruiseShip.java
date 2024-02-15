@@ -25,7 +25,7 @@ public class CruiseShip extends Ship {
 
     @Override
     public void print() {
-        System.out.println("src.Ship Name: " + this.getName());
+        System.out.println("Ship Name: " + this.getName());
         System.out.println("Max Number of Passengers: " + maxNumOfPassengers);
         System.out.println();
     }

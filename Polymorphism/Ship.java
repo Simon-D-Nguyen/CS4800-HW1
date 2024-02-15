@@ -31,7 +31,7 @@ public class Ship {
     }
 
     public void print() {
-        System.out.println("src.Ship Name: " + name);
+        System.out.println("Ship Name: " + name);
         System.out.println("Build Year: " + buildYear);
         System.out.println();
     }
