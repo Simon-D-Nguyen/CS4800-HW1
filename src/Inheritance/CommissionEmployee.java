@@ -1,4 +1,4 @@
-package Inheritance;
+package src.Inheritance;
 
 public class CommissionEmployee extends Employee {
     private int commissionRate;

@@ -1,4 +1,4 @@
-package Polymorphism;
+package src.Polymorphism;
 
 public class ShipTest {
 

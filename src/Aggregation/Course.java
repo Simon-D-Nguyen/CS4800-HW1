@@ -1,4 +1,4 @@
-package Aggregation;
+package src.Aggregation;
 
 public class Course {
     private String courseName;
