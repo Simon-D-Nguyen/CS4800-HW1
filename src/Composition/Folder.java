@@ -52,20 +52,57 @@ public class Folder {
     }
 
     public void print() {
-        System.out.println(name);
+
+        print(0);
+
+//        System.out.println(name);
+//        int spacing = 1;
+//
+//        while(!folderMap.isEmpty()) {
+//            System.out.print("\t-");
+//            for(Folder entry : folderMap.values()){
+//                entry.print(spacing);
+//            }
+//        }
+//
+//        while(!fileMap.isEmpty()) {
+//            System.out.print("\t-");
+//            for(File entry : fileMap.values()) {
+//                entry.print();
+//            }
+//        }
+//
+//
+        //TODO: Prints out all files and subdirectories
+    }
+
+    public void print(int spacing) {
+
+        StringBuilder nameLine = new StringBuilder();
+
+        for(int i = 0; i < spacing; i++){
+            nameLine.append("\t");
+        }
+
+        nameLine.append("- " + name);
+        System.out.println(nameLine.toString());
+
+        int newSpacing = spacing + 1;
 
         while(!folderMap.isEmpty()) {
+            System.out.println();
             for(Folder entry : folderMap.values()){
-                entry.print();
+                entry.print(newSpacing);
             }
         }
 
         while(!fileMap.isEmpty()) {
+            System.out.print("\t-");
             for(File entry : fileMap.values()) {
-                entry.print();
+                entry.print(newSpacing);
             }
         }
 
-        //TODO: Prints out all files and subdirectories
     }
+
 }

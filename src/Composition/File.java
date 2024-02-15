@@ -18,6 +18,17 @@ public class File {
 
 
     public void print() {
-        System.out.println(name);
+        print(0);
+    }
+
+    public void print(int spacing) {
+        StringBuilder nameLine = new StringBuilder();
+
+        for(int i = 0; i < spacing; i++){
+            nameLine.append("\t");
+        }
+
+        nameLine.append("- " + name);
+        System.out.println(nameLine.toString());
     }
 }
