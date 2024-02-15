@@ -1,3 +1,7 @@
+/*
+Ship.java
+ */
+
 package Polymorphism;
 
 public class Ship {

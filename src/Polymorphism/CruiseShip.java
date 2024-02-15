@@ -1,3 +1,7 @@
+/*
+CruiseShip.java
+ */
+
 package Polymorphism;
 
 public class CruiseShip extends Ship {
