@@ -5,9 +5,9 @@ public class CourseTest {
     public static void main(String[] args) {
 
         Textbook courseBook = new Textbook();
-        courseBook.setAuthor("Simon Eggo");
-        courseBook.setTitle("The Ads");
-        courseBook.setPublisher("Penguin");
+        courseBook.setAuthor("Robert C. Martin");
+        courseBook.setTitle("Clean Code");
+        courseBook.setPublisher("Pearson");
 
 
         Course newCourse = new Course(courseBook);

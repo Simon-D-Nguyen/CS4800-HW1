@@ -52,9 +52,9 @@ public class Course {
 
 
     public void print() {
-        String instuctorName = instructorLastName + ", " + instructorFirstName;
+        String instructorName = instructorLastName + ", " + instructorFirstName;
         System.out.println("Course Name: " + courseName);
-        System.out.println("Instructor Name (Last, First): " + instuctorName);
+        System.out.println("Instructor Name (Last, First): " + instructorName);
         System.out.println("Textbook: ");
         System.out.println("\tTitle: " + this.textbook.getTitle());
         System.out.println("\tAuthor: " + this.textbook.getAuthor());
