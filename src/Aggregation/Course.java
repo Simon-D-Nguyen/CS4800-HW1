@@ -68,7 +68,7 @@ public class Course {
         System.out.println("Course Name: " + courseName);
 
         System.out.println("Instructors (Last, First): ");
-        System.out.println("\t" + instructor1.getInstructorFirstName() + ", "
+        System.out.println("\t" + instructor1.getInstructorLastName() + ", "
                 + instructor1.getInstructorFirstName());
         System.out.println("\t" + instructor2.getInstructorLastName() + ", " +
                 instructor2.getInstructorFirstName());
