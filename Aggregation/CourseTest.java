@@ -1,6 +1,6 @@
 package Aggregation;
 
-public class Main {
+public class CourseTest {
 
     public static void main(String[] args) {
 

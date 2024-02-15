@@ -1,6 +1,6 @@
 package Polymorphism;
 
-public class Main {
+public class ShipTest {
 
     public static void main(String[] args) {
 

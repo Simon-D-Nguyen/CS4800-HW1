@@ -1,6 +1,6 @@
 package Inheritance;
 
-public class Main {
+public class EmployeeTest {
 
     public static void main(String[] args) {
 
