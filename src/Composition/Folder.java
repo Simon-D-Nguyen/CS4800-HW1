@@ -28,9 +28,8 @@ public class Folder {
         fileMap.put(fileName, tempFile);
     }
 
-    public void addFolder(String folderName) {
-        Folder tempFolder = new Folder(folderName);
-        folderMap.put(folderName, tempFolder);
+    public void addFolder(Folder folder) {
+        folderMap.put(folder.getName(), folder);
     }
 
     public void deleteFile(String fileName) {
