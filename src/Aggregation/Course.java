@@ -12,9 +12,17 @@ public class Course {
     private Textbook textbook2;
 
 
+    public Course() {
+        this.courseName = "n/a";
+        this.instructor1 = null;
+        this.instructor2 = null;
+        this.textbook1 = null;
+        this.textbook2 = null;
+    }
+
     public Course(Textbook textbook1, Textbook textbook2, Instructor instructor1,
                   Instructor instructor2) {
-        setCourseName("n/a");
+        this.courseName = "n/a";
         this.instructor1 = instructor1;
         this.instructor2 = instructor2;
         this.textbook1 = textbook1;
