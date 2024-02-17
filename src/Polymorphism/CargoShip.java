@@ -11,13 +11,6 @@ public class CargoShip extends Ship {
         super();
         this.cargoCapacityInTons = -1;
     }
-    public CargoShip(String name,
-                     String buildYear,
-                     int cargoCapacityInTons) {
-        super(name, buildYear);
-        this.cargoCapacityInTons = cargoCapacityInTons;
-    }
-
 
     public void setCargoCapacityInTon(int cargoCapacityInTons) {
         this.cargoCapacityInTons = cargoCapacityInTons;

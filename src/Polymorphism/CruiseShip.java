@@ -12,13 +12,6 @@ public class CruiseShip extends Ship {
         this.maxNumOfPassengers = 0;
     }
 
-    public CruiseShip(String name,
-                      String buildYear,
-                      int maxNumOfPassengers) {
-        super(name, buildYear);
-        this.maxNumOfPassengers = maxNumOfPassengers;
-    }
-
     public void setMaxNumOfPassengers(int maxNumOfPassengers) {
         this.maxNumOfPassengers = maxNumOfPassengers;
     }

@@ -13,11 +13,6 @@ public class Ship {
         this.buildYear = "0";
     }
 
-    public Ship(String name, String buildYear) {
-        this.name = name;
-        this.buildYear = buildYear;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
