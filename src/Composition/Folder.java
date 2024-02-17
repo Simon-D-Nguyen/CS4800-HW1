@@ -45,7 +45,7 @@ public class Folder {
                 return currentFolder;
             }
             else{
-                currentFolder.folderIsInFolder(pathList);
+                return currentFolder.folderIsInFolder(pathList);
             }
         }
         return null;
@@ -60,9 +60,9 @@ public class Folder {
         return output;
     }
 
-    private void modifyFileSystem(String path, String newName, int modificationType){
+    private void modifyFileSystem(String newName, String path, int modificationType){
         List<String> pathList = folderPath(path);
-        pathList.remove(0);
+        pathList.removeFirst();
 
         Folder latestFolder = folderIsInFolder(pathList);
         if(latestFolder != null){
@@ -94,17 +94,8 @@ public class Folder {
         fileMap.put(fileName, tempFile);
     }
 
-    public void addFileToSubFolder(String path, String fileName) {
-        List<String> pathList = folderPath(path);
-        pathList.remove(0);
-
-        Folder latestFolder = folderIsInFolder(pathList);
-        if(latestFolder != null){
-            latestFolder.addFile(fileName);
-        }
-        else  {
-            System.out.println("Path List was incorrect!");
-        }
+    public void addFile(String fileName, String path) {
+        modifyFileSystem(fileName, path, ADD_FILE);
     }
 
 
@@ -114,20 +105,9 @@ public class Folder {
         folderMap.put(folderName, tempFolder);
     }
 
-    public void addFolderToSubFolder(String path, String folderName) {
-        List<String> pathList = folderPath(path);
-        pathList.remove(0);
-
-        Folder latestFolder = folderIsInFolder(pathList);
-        if(latestFolder != null){
-            latestFolder.addFolder(folderName);
-        }
-        else  {
-            System.out.println("Path List was incorrect!");
-        }
+    public void addFolder(String folderName, String path) {
+        modifyFileSystem(folderName, path, ADD_FOLDER);
     }
-
-
 
     public void deleteFile(String fileName) {
         if (fileMap.containsKey(fileName)) {
@@ -139,6 +119,9 @@ public class Folder {
         }
     }
 
+    public void deleteFile(String fileName, String path) {
+        modifyFileSystem(fileName, path, DELETE_FILE);
+    }
 
 
     public void deleteFolder(String folderName) {
@@ -148,6 +131,10 @@ public class Folder {
         } else {
             System.out.println("Folder \"" + folderName + "\" was not found!");
         }
+    }
+
+    public void deleteFolder(String folderName, String path) {
+        modifyFileSystem(folderName, path, DELETE_FOLDER);
     }
 
 
