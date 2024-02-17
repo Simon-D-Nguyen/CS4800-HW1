@@ -59,7 +59,7 @@ public class Course {
         }
     }
 
-    public void deleteInstructor(int number) {
+    public void removeInstructor(int number) {
         if (numCheck(numberOfInstructors, number)) {
             instructors.remove(number - 1);
         }
@@ -85,7 +85,7 @@ public class Course {
         }
     }
 
-    public void deleteTextbook(int number) {
+    public void removeTextbook(int number) {
         if (numCheck(numberOfTextbooks, number)) {
             textbooks.remove(number - 1);
         }
