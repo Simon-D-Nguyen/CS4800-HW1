@@ -7,6 +7,7 @@ public class EmployeeTest {
         SalariedEmployee salariedEmployee1 = new SalariedEmployee();
         salariedEmployee1.setFirstName("Joe");
         salariedEmployee1.setLastName("Jones");
+        salariedEmployee1.setSocialSecurityNum("111-11-1111");
         salariedEmployee1.setWeeklySalary(2500);
 
         SalariedEmployee salariedEmployee2 = new SalariedEmployee();
@@ -18,6 +19,7 @@ public class EmployeeTest {
         HourlyEmployee hourlyEmployee1 = new HourlyEmployee();
         hourlyEmployee1.setFirstName("Stephanie");
         hourlyEmployee1.setLastName("Smith");
+        hourlyEmployee1.setSocialSecurityNum("222-22-2222");
         hourlyEmployee1.setWage(25);
         hourlyEmployee1.setNumOfHoursWorked(32);
 
@@ -38,6 +40,7 @@ public class EmployeeTest {
         CommissionEmployee commissionEmployee2 = new CommissionEmployee();
         commissionEmployee2.setFirstName("Mahnaz");
         commissionEmployee2.setLastName("Vaziri");
+        commissionEmployee2.setSocialSecurityNum("777-77-7777");
         commissionEmployee2.setCommissionRate(22);
         commissionEmployee2.setGrossSales(40000);
 
