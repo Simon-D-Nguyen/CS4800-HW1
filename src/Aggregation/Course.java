@@ -95,8 +95,6 @@ public class Course {
     }
 
 
-
-
     public void print() {
         System.out.println("Course Name: " + courseName);
         System.out.println("Instructors (Last, First): ");
