@@ -4,20 +4,25 @@ Folder.java
 
 package Composition;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Folder {
     private String name;
     private Map<String, File> fileMap;
     private Map<String, Folder> folderMap;
 
-    public Folder(String name) {
-        this.name = name;
-        fileMap = new HashMap<String, File>();
-        folderMap = new HashMap<String, Folder>();
+    private static final int DELETE_FILE= 0;
+    private static final int DELETE_FOLDER = 1;
+    private static final int ADD_FILE = 2;
+    private static final int ADD_FOLDER=3;
 
+
+    public Folder() {
+        this.name = "n/a";
+        fileMap = new HashMap<>();
+        folderMap = new HashMap<>();
     }
+
 
     public void setName(String name) {
         this.name = name;
@@ -28,18 +33,101 @@ public class Folder {
     }
 
 
+
+    private Folder folderIsInFolder(List<String> pathList){
+        String currentFolderName = pathList.getFirst();
+
+        if (folderMap.containsKey(currentFolderName)){
+            pathList.removeFirst();
+            Folder currentFolder = folderMap.get(currentFolderName);
+
+            if(pathList.isEmpty()){
+                return currentFolder;
+            }
+            else{
+                currentFolder.folderIsInFolder(pathList);
+            }
+        }
+        return null;
+    }
+
+    private List<String> folderPath(String path){
+        List<String> output = new LinkedList<>();
+        String[] pathArray = path.split("[\\\\|\\|/|//]+");
+        for(String folderName : pathArray){
+            output.add(folderName);
+        }
+        return output;
+    }
+
+    private void modifyFileSystem(String path, String newName, int modificationType){
+        List<String> pathList = folderPath(path);
+        pathList.remove(0);
+
+        Folder latestFolder = folderIsInFolder(pathList);
+        if(latestFolder != null){
+
+            if(modificationType == ADD_FILE) {
+                latestFolder.addFile(newName);
+            }
+            else if(modificationType == ADD_FOLDER){
+                latestFolder.addFolder(newName);
+            }
+            else if(modificationType == DELETE_FOLDER){
+                latestFolder.deleteFolder(newName);
+            }
+            else if (modificationType == DELETE_FILE) {
+                latestFolder.deleteFile(newName);
+            }
+        }
+
+        else  {
+            System.out.println("Path List was incorrect!");
+        }
+    }
+
+
+
     public void addFile(String fileName){
-        File tempFile = new File(fileName);
+        File tempFile = new File();
+        tempFile.setName(fileName);
         fileMap.put(fileName, tempFile);
     }
 
-    public void addFolder(Folder folder) {
-        folderMap.put(folder.getName(), folder);
+    public void addFileToSubFolder(String path, String fileName) {
+        List<String> pathList = folderPath(path);
+        pathList.remove(0);
+
+        Folder latestFolder = folderIsInFolder(pathList);
+        if(latestFolder != null){
+            latestFolder.addFile(fileName);
+        }
+        else  {
+            System.out.println("Path List was incorrect!");
+        }
     }
 
-    public Folder getSubFolder(String name) {
-        return folderMap.get(name);
+
+    public void addFolder(String folderName) {
+        Folder tempFolder = new Folder();
+        tempFolder.setName(folderName);
+        folderMap.put(folderName, tempFolder);
     }
+
+    public void addFolderToSubFolder(String path, String folderName) {
+        List<String> pathList = folderPath(path);
+        pathList.remove(0);
+
+        Folder latestFolder = folderIsInFolder(pathList);
+        if(latestFolder != null){
+            latestFolder.addFolder(folderName);
+        }
+        else  {
+            System.out.println("Path List was incorrect!");
+        }
+    }
+
+
 
     public void deleteFile(String fileName) {
         if (fileMap.containsKey(fileName)) {
@@ -47,24 +135,21 @@ public class Folder {
             System.out.println("File \"" + fileName + "\" was deleted!");
         }
         else {
-            for(Folder entry : folderMap.values()) {
-                entry.deleteFile(fileName);
-            }
+            System.out.println("File \"" + fileName + "\" was not found.");
         }
     }
+
 
 
     public void deleteFolder(String folderName) {
         if (folderMap.containsKey(folderName)) {
             folderMap.remove(folderName);
             System.out.println("Folder \"" + folderName + "\" was deleted!");
-        }
-        else {
-            for(Folder entry : folderMap.values()) {
-                entry.deleteFolder(folderName);
-            }
+        } else {
+            System.out.println("Folder \"" + folderName + "\" was not found!");
         }
     }
+
 
     public void print() {
         print(0);
@@ -79,7 +164,7 @@ public class Folder {
         }
 
         nameLine.append("|- " + name + "\t---<Folder>");
-        System.out.println(nameLine.toString());
+        System.out.println(nameLine);
 
         int newSpacing = spacing + 1;
 
@@ -94,7 +179,6 @@ public class Folder {
                 entry.print(newSpacing);
             }
         }
-
     }
 
 }
