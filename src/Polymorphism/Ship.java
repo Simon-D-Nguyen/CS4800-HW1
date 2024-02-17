@@ -1,3 +1,7 @@
+/*
+Ship.java
+ */
+
 package Polymorphism;
 
 public class Ship {
@@ -5,13 +9,8 @@ public class Ship {
     protected String buildYear;
 
     public Ship() {
-        setName("n/a");
-        setBuildYear("0");
-    }
-
-    public Ship(String name, String buildYear) {
-        setName(name);
-        setBuildYear(buildYear);
+        this.name = "n/a";
+        this.buildYear = "0";
     }
 
     public void setName(String name) {

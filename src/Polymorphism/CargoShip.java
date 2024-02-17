@@ -1,32 +1,29 @@
+/*
+CargoShip.java
+ */
+
 package Polymorphism;
 
 public class CargoShip extends Ship {
-    private int cargoCapacity;
+    private int cargoCapacityInTons;
 
     public CargoShip() {
         super();
-        setCargoCapacity(-1);
-    }
-    public CargoShip(String name,
-                     String buildYear,
-                     int cargoCapacity) {
-        super(name, buildYear);
-        setCargoCapacity(cargoCapacity);
+        this.cargoCapacityInTons = -1;
     }
 
-
-    public void setCargoCapacity(int cargoCapacity) {
-        this.cargoCapacity = cargoCapacity;
+    public void setCargoCapacityInTon(int cargoCapacityInTons) {
+        this.cargoCapacityInTons = cargoCapacityInTons;
     }
 
-    public int getCargoCapacity() {
-        return cargoCapacity;
+    public int getCargoCapacityInTons() {
+        return cargoCapacityInTons;
     }
 
     @Override
     public void print() {
         System.out.println("Ship Name: " + this.getName());
-        System.out.println("Cargo Capacity (tons): " + cargoCapacity);
+        System.out.println("Cargo Capacity (tons): " + cargoCapacityInTons);
         System.out.println();
     }
 }

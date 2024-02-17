@@ -1,3 +1,7 @@
+/*
+CruiseShip.java
+ */
+
 package Polymorphism;
 
 public class CruiseShip extends Ship {
@@ -5,14 +9,7 @@ public class CruiseShip extends Ship {
 
     public CruiseShip() {
         super();
-        setMaxNumOfPassengers(0);
-    }
-
-    public CruiseShip(String name,
-                      String buildYear,
-                      int maxNumOfPassengers) {
-        super(name, buildYear);
-        setMaxNumOfPassengers(maxNumOfPassengers);
+        this.maxNumOfPassengers = 0;
     }
 
     public void setMaxNumOfPassengers(int maxNumOfPassengers) {
