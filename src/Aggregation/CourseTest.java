@@ -18,20 +18,24 @@ public class CourseTest {
         textbook2.setTitle("AAAAAAAAA");
         textbook2.setPublisher("CPP");
 
-        Instructor first = new Instructor();
-        first.setInstructorFirstName("Nima");
-        first.setInstructorLastName("Davarpanah");
-        first.setOfficeNum("3-2636");
+        Instructor instructor1 = new Instructor();
+        instructor1.setInstructorFirstName("Nima");
+        instructor1.setInstructorLastName("Davarpanah");
+        instructor1.setOfficeNum("3-2636");
 
-        Instructor second = new Instructor();
-        second.setInstructorFirstName("Keivan");
-        second.setInstructorLastName("Navi");
-        second.setOfficeNum("8-42");
+        Instructor instructor2 = new Instructor();
+        instructor2.setInstructorFirstName("Keivan");
+        instructor2.setInstructorLastName("Navi");
+        instructor2.setOfficeNum("8-42");
 
 
 
-        Course newCourse = new Course(textbook1, textbook2, first, second);
+        Course newCourse = new Course();
         newCourse.setCourseName("CS4800");
+        newCourse.addInstructor(instructor1);
+        newCourse.addInstructor(instructor2);
+        newCourse.addTextbook(textbook1);
+        newCourse.addTextbook(textbook2);
 
         newCourse.print();
     }
