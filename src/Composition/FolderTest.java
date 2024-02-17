@@ -8,15 +8,6 @@ public class FolderTest {
 
     public static void main(String[] args) {
 
-//        String path = "hello\\hello\\h\\hello/hello//hh";
-//        String[] pathTest = path.split("[\\\\|\\|/|//]+");
-//
-//        for(String word : pathTest) {
-//            System.out.println(word);
-//        }
-//        System.out.println();
-//        System.out.println();
-
         StringBuilder pathBuilder = new StringBuilder();
         pathBuilder.append("php_demo1");
 
@@ -51,14 +42,11 @@ public class FolderTest {
         rootFolder.addFile(".htrouter.php", publicFolder);
         rootFolder.addFile("index.html", publicFolder);
 
-
-
         rootFolder.print();
 
 
         System.out.println("\n---\n");
         rootFolder.deleteFolder("app", sourceFile);
-
 
         rootFolder.print();
 
@@ -67,6 +55,5 @@ public class FolderTest {
         rootFolder.deleteFolder("public", sourceFile);
 
         rootFolder.print();
-
     }
 }

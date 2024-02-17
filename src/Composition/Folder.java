@@ -110,6 +110,7 @@ public class Folder {
         modifyFileSystem(folderName, path, ADD_FOLDER);
     }
 
+
     public void deleteFile(String fileName) {
         if (fileMap.containsKey(fileName)) {
             fileMap.remove(fileName);
