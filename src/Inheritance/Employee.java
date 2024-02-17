@@ -12,12 +12,6 @@ public class Employee {
         this.socialSecurityNum = "n/a";
     }
 
-    public Employee(String firstName, String lastName, String socialSecurityNum){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.socialSecurityNum = socialSecurityNum;
-    }
-
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;

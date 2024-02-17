@@ -8,13 +8,6 @@ public class BaseEmployee extends Employee {
         this.baseSalary = -1;
     }
 
-    public BaseEmployee(String firstName,
-                        String lastName,
-                        String socialSecurityNum,
-                        int baseSalary) {
-        super(firstName, lastName, socialSecurityNum);
-        this.baseSalary = baseSalary;
-    }
 
     public void setBaseSalary(int baseSalary) {
         this.baseSalary = baseSalary;

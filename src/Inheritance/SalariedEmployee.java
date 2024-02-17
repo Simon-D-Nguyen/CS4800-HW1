@@ -8,15 +8,6 @@ public class SalariedEmployee extends Employee{
         this.weeklySalary = -1;
     }
 
-    public SalariedEmployee(String firstName,
-                            String lastName,
-                            String socialSecurityNum,
-                            int weeklySalary){
-        super(firstName, lastName, socialSecurityNum);
-        this.weeklySalary = weeklySalary;
-    }
-
-
     public int getWeeklySalary(){
         return weeklySalary;
     }
