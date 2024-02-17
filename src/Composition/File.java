@@ -1,10 +1,14 @@
+/*
+File.java
+ */
+
 package Composition;
 
 public class File {
     private String name;
 
-    public File(String name) {
-        this.name = name;
+    public File() {
+        this.name = "n/a";
     }
 
     public void setName(String name) {
@@ -15,20 +19,15 @@ public class File {
         return name;
     }
 
-
-
     public void print() {
         print(0);
     }
 
     public void print(int spacing) {
-        StringBuilder nameLine = new StringBuilder();
+        String format = "|- " + name + "\t---<File>";
 
-        for(int i = 0; i < spacing; i++){
-            nameLine.append("\t");
-        }
-
-        nameLine.append("|- " + name + "\t---<File>");
-        System.out.println(nameLine.toString());
+        String nameLine = "\t".repeat(Math.max(0, spacing)) +
+                format;
+        System.out.println(nameLine);
     }
 }
