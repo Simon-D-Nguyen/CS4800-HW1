@@ -30,6 +30,7 @@ public class CommissionEmployee extends Employee {
     public void print() {
         System.out.println("CommissionEmployee: ");
         System.out.println("\tName: " + firstName + " " + lastName);
+        System.out.println("\tSSN: " + socialSecurityNum);
         System.out.printf("\tCommission Rate: %,d%%%n", commissionRate);
         System.out.printf("\tGross Sales: $%,d%n", grossSales);
         System.out.println();

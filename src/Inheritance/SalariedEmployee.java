@@ -19,6 +19,7 @@ public class SalariedEmployee extends Employee{
     public void print() {
         System.out.println("SalariedEmployee: ");
         System.out.println("\tName: " + firstName + " " + lastName);
+        System.out.println("\tSSN: " + socialSecurityNum);
         System.out.printf("\tWeekly Salary: $%,d%n", weeklySalary);
         System.out.println();
     }

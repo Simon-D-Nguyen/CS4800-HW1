@@ -30,6 +30,7 @@ public class HourlyEmployee extends Employee{
     public void print() {
         System.out.println("HourlyEmployee: ");
         System.out.println("\tName: " + firstName + " " + lastName);
+        System.out.println("\tSSN: " + socialSecurityNum);
         System.out.printf("\tWage: $%,d%n", wage);
         System.out.printf("\tHours Worked: %d%n", numOfHoursWorked);
         System.out.println();
