@@ -24,13 +24,10 @@ public class File {
     }
 
     public void print(int spacing) {
-        StringBuilder nameLine = new StringBuilder();
+        String format = "|- " + name + "\t---<File>";
 
-        for(int i = 0; i < spacing; i++){
-            nameLine.append("\t");
-        }
-
-        nameLine.append("|- " + name + "\t---<File>");
-        System.out.println(nameLine.toString());
+        String nameLine = "\t".repeat(Math.max(0, spacing)) +
+                format;
+        System.out.println(nameLine);
     }
 }

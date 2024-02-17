@@ -36,7 +36,6 @@ public class FolderTest {
         rootFolder.addFolder("public", pathBuilder.toString());
 
 
-
         String sourceFile = pathBuilder.toString();
         pathBuilder.append("//app");
         rootFolder.addFolder("config", pathBuilder.toString());
@@ -45,7 +44,6 @@ public class FolderTest {
         rootFolder.addFolder("migrations", pathBuilder.toString());
         rootFolder.addFolder("models", pathBuilder.toString());
         rootFolder.addFolder("views", pathBuilder.toString());
-        rootFolder.print();
 
         String publicFolder = sourceFile + "//public";
 

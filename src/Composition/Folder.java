@@ -33,7 +33,6 @@ public class Folder {
     }
 
 
-
     private Folder folderIsInFolder(List<String> pathList){
         String currentFolderName = pathList.getFirst();
 
@@ -54,11 +53,13 @@ public class Folder {
     private List<String> folderPath(String path){
         List<String> output = new LinkedList<>();
         String[] pathArray = path.split("[\\\\|\\|/|//]+");
+
         for(String folderName : pathArray){
             output.add(folderName);
         }
         return output;
     }
+
 
     private void modifyFileSystem(String newName, String path, int modificationType){
         List<String> pathList = folderPath(path);
@@ -142,19 +143,16 @@ public class Folder {
         print(0);
     }
 
+
     private void print(int spacing) {
+        String format = "|- " + name + "\t---<Folder>";
 
-        StringBuilder nameLine = new StringBuilder();
+        String nameLine = "\t".repeat(Math.max(0, spacing)) +
+                format;
 
-        for(int i = 0; i < spacing; i++){
-            nameLine.append("\t");
-        }
-
-        nameLine.append("|- " + name + "\t---<Folder>");
         System.out.println(nameLine);
 
         int newSpacing = spacing + 1;
-
         if (!folderMap.isEmpty()) {
             for(Folder entry : folderMap.values()){
                 entry.print(newSpacing);
