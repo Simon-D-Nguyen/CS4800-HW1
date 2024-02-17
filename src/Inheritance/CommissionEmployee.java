@@ -6,19 +6,10 @@ public class CommissionEmployee extends Employee {
 
     public CommissionEmployee(){
         super();
-        setCommissionRate(0);
-        setGrossSales(-1);
+        this.commissionRate = -1;
+        this.grossSales = -1;
     }
 
-    public CommissionEmployee(String firstName,
-                              String lastName,
-                              String socialSecurityNum,
-                              int commissionRate,
-                              int grossSales) {
-        super(firstName, lastName, socialSecurityNum);
-        setCommissionRate(commissionRate);
-        setGrossSales(grossSales);
-    }
 
     public void setCommissionRate(int commissionRate) {
         this.commissionRate = commissionRate;
@@ -34,5 +25,14 @@ public class CommissionEmployee extends Employee {
 
     public int getGrossSales() {
         return grossSales;
+    }
+
+    public void print() {
+        System.out.println("CommissionEmployee: ");
+        System.out.println("\tName: " + firstName + " " + lastName);
+        System.out.println("\tSSN: " + socialSecurityNum);
+        System.out.printf("\tCommission Rate: %,d%%%n", commissionRate);
+        System.out.printf("\tGross Sales: $%,d%n", grossSales);
+        System.out.println();
     }
 }

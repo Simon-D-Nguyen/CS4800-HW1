@@ -5,16 +5,9 @@ public class BaseEmployee extends Employee {
 
     public BaseEmployee(){
         super();
-        setBaseSalary(-1);
+        this.baseSalary = -1;
     }
 
-    public BaseEmployee(String firstName,
-                        String lastName,
-                        String socialSecurityNum,
-                        int baseSalary) {
-        super(firstName, lastName, socialSecurityNum);
-        setBaseSalary(baseSalary);
-    }
 
     public void setBaseSalary(int baseSalary) {
         this.baseSalary = baseSalary;
@@ -22,5 +15,13 @@ public class BaseEmployee extends Employee {
 
     public int getBaseSalary() {
         return baseSalary;
+    }
+
+    public void print() {
+        System.out.println("BaseEmployee: ");
+        System.out.println("\tName: " + firstName + " " + lastName);
+        System.out.println("\tSSN: " + socialSecurityNum);
+        System.out.printf("\tBase Salary: $%,d%n", baseSalary);
+        System.out.println();
     }
 }

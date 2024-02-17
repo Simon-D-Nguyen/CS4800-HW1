@@ -1,21 +1,15 @@
 package Inheritance;
 
 public class Employee {
-    private String firstName;
-    private String lastName;
-    private String socialSecurityNum;
+    protected String firstName;
+    protected String lastName;
+    protected String socialSecurityNum;
 
 
     public Employee(){
-        setFirstName("n/a");
-        setLastName("n/a");
-        setSocialSecurityNum("n/a");
-    }
-
-    public Employee(String firstName, String lastName, String socialSecurityNum){
-        setFirstName(firstName);
-        setLastName(lastName);
-        setSocialSecurityNum(socialSecurityNum);
+        this.firstName = "n/a";
+        this.lastName = "n/a";
+        this.socialSecurityNum = "n/a";
     }
 
 
@@ -40,5 +34,4 @@ public class Employee {
     public String getSocialSecurityNum() {
         return socialSecurityNum;
     }
-
 }

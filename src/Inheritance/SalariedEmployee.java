@@ -5,17 +5,8 @@ public class SalariedEmployee extends Employee{
 
     public SalariedEmployee() {
         super();
-        setWeeklySalary(-1);
+        this.weeklySalary = -1;
     }
-
-    public SalariedEmployee(String firstName,
-                            String lastName,
-                            String socialSecurityNum,
-                            int weeklySalary){
-        super(firstName, lastName, socialSecurityNum);
-        setWeeklySalary(weeklySalary);
-    }
-
 
     public int getWeeklySalary(){
         return weeklySalary;
@@ -23,5 +14,13 @@ public class SalariedEmployee extends Employee{
 
     public void setWeeklySalary(int weeklySalary) {
         this.weeklySalary = weeklySalary;
+    }
+
+    public void print() {
+        System.out.println("SalariedEmployee: ");
+        System.out.println("\tName: " + firstName + " " + lastName);
+        System.out.println("\tSSN: " + socialSecurityNum);
+        System.out.printf("\tWeekly Salary: $%,d%n", weeklySalary);
+        System.out.println();
     }
 }

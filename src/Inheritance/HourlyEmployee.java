@@ -6,18 +6,8 @@ public class HourlyEmployee extends Employee{
 
     public HourlyEmployee() {
         super();
-        setWage(-1);
-        setNumOfHoursWorked(-1);
-    }
-
-    public HourlyEmployee(String firstName,
-                          String lastName,
-                          String socialSecurityNum,
-                          int wage,
-                          int numOfHoursWorked) {
-        super(firstName, lastName, socialSecurityNum);
-        setWage(wage);
-        setNumOfHoursWorked(numOfHoursWorked);
+        this.wage = -1;
+        this.numOfHoursWorked = -1;
     }
 
 
@@ -36,4 +26,14 @@ public class HourlyEmployee extends Employee{
     public int getNumOfHoursWorked() {
         return numOfHoursWorked;
     }
+
+    public void print() {
+        System.out.println("HourlyEmployee: ");
+        System.out.println("\tName: " + firstName + " " + lastName);
+        System.out.println("\tSSN: " + socialSecurityNum);
+        System.out.printf("\tWage: $%,d%n", wage);
+        System.out.printf("\tHours Worked: %d%n", numOfHoursWorked);
+        System.out.println();
+    }
+
 }
