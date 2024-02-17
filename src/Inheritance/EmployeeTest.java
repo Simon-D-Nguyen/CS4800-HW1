@@ -9,7 +9,11 @@ public class EmployeeTest {
         salariedEmployee1.setLastName("Jones");
         salariedEmployee1.setWeeklySalary(2500);
 
-        SalariedEmployee salariedEmployee2 = new SalariedEmployee("Renwa", "Chanel", "555-55-5555", 1700);
+        SalariedEmployee salariedEmployee2 = new SalariedEmployee();
+        salariedEmployee2.setFirstName("Renwa");
+        salariedEmployee2.setLastName("Chanel");
+        salariedEmployee2.setSocialSecurityNum("555-55-5555");
+        salariedEmployee2.setWeeklySalary(1700);
 
         HourlyEmployee hourlyEmployee1 = new HourlyEmployee();
         hourlyEmployee1.setFirstName("Stephanie");
@@ -17,7 +21,12 @@ public class EmployeeTest {
         hourlyEmployee1.setWage(25);
         hourlyEmployee1.setNumOfHoursWorked(32);
 
-        HourlyEmployee hourlyEmployee2 = new HourlyEmployee("Mary", "Quinn", "333-33-3333", 19, 47);
+        HourlyEmployee hourlyEmployee2 = new HourlyEmployee();
+        hourlyEmployee2.setFirstName("Mary");
+        hourlyEmployee2.setLastName("Quinn");
+        hourlyEmployee2.setSocialSecurityNum("333-33-3333");
+        hourlyEmployee2.setWage(19);
+        hourlyEmployee2.setNumOfHoursWorked(47);
 
         CommissionEmployee commissionEmployee1 = new CommissionEmployee();
         commissionEmployee1.setFirstName("Nicole");
@@ -26,7 +35,11 @@ public class EmployeeTest {
         commissionEmployee1.setCommissionRate(15);
         commissionEmployee1.setGrossSales(50000);
 
-        CommissionEmployee commissionEmployee2 = new CommissionEmployee("Mahnaz", "Vaziri", "777-77-7777", 22, 40000);
+        CommissionEmployee commissionEmployee2 = new CommissionEmployee();
+        commissionEmployee2.setFirstName("Mahnaz");
+        commissionEmployee2.setLastName("Vaziri");
+        commissionEmployee2.setCommissionRate(22);
+        commissionEmployee2.setGrossSales(40000);
 
 
         BaseEmployee baseEmployee1 = new BaseEmployee();
