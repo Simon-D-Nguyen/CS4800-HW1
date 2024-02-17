@@ -26,4 +26,13 @@ public class HourlyEmployee extends Employee{
     public int getNumOfHoursWorked() {
         return numOfHoursWorked;
     }
+
+    public void print() {
+        System.out.println("HourlyEmployee: ");
+        System.out.println("\tName: " + firstName + " " + lastName);
+        System.out.printf("\tWage: $%,d%n", wage);
+        System.out.printf("\tHours Worked: %d%n", numOfHoursWorked);
+        System.out.println();
+    }
+
 }

@@ -16,4 +16,11 @@ public class BaseEmployee extends Employee {
     public int getBaseSalary() {
         return baseSalary;
     }
+
+    public void print() {
+        System.out.println("BaseEmployee: ");
+        System.out.println("\tName: " + firstName + " " + lastName);
+        System.out.printf("\tBase Salary: $%,d%n", baseSalary);
+        System.out.println();
+    }
 }

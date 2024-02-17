@@ -1,9 +1,9 @@
 package Inheritance;
 
 public class Employee {
-    private String firstName;
-    private String lastName;
-    private String socialSecurityNum;
+    protected String firstName;
+    protected String lastName;
+    protected String socialSecurityNum;
 
 
     public Employee(){
@@ -34,5 +34,4 @@ public class Employee {
     public String getSocialSecurityNum() {
         return socialSecurityNum;
     }
-
 }

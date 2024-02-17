@@ -26,4 +26,12 @@ public class CommissionEmployee extends Employee {
     public int getGrossSales() {
         return grossSales;
     }
+
+    public void print() {
+        System.out.println("CommissionEmployee: ");
+        System.out.println("\tName: " + firstName + " " + lastName);
+        System.out.printf("\tCommission Rate: %,d%%%n", commissionRate);
+        System.out.printf("\tGross Sales: $%,d%n", grossSales);
+        System.out.println();
+    }
 }
