@@ -48,7 +48,13 @@ public class EmployeeTest {
         baseEmployee1.setSocialSecurityNum("666-66-6666");
         baseEmployee1.setBaseSalary(95000);
 
-
+        baseEmployee1.print();
+        commissionEmployee1.print();
+        commissionEmployee2.print();
+        hourlyEmployee1.print();
+        hourlyEmployee2.print();
+        salariedEmployee1.print();
+        salariedEmployee2.print();
 
     }
 }
